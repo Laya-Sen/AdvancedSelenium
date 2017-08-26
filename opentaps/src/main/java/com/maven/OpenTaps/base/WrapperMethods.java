@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-public class WrapperMethods extends Mylistener{
+public class WrapperMethods extends WdEventListener{
 	
 	WebDriver driver;
 	public static EventFiringWebDriver eventDriver;
@@ -165,7 +165,7 @@ public class WrapperMethods extends Mylistener{
 		}
 		
 		eventDriver = new EventFiringWebDriver(driver);
-		Mylistener handler = new Mylistener();
+		WdEventListener handler = new WdEventListener();
 		eventDriver.register(handler);
 		eventDriver.get("http://leaftaps.com/opentaps");
 		

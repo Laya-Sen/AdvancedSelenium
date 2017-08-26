@@ -13,7 +13,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.AfterClass;
 
-public class TestNGAnnotations extends WrapperMethods {
+public class TestNGAnnotations extends wdWrappers {
 @BeforeSuite
  public void BeforeSuiteTest() {
 	System.out.println("This is Before Suite");
@@ -33,11 +33,11 @@ System.out.println("This is BeforeClass");
 
 @DataProvider 
 public void DataProvider() {
-System.out.println("Data Provided");
+
 }
 
 @BeforeMethod
-public void BeforeMethod() {
+public void BeforeMethod() { 
 	InvokeApp("chrome");
 	LaunchBrowser();
 	Type(LocateElement("id", "username"),"DemoSalesManager");

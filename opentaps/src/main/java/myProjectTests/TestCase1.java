@@ -19,5 +19,7 @@ public class TestCase1 extends WrapperMethods{
 		Type(LocateElement("name", "lastNameLocal"),"Sen");
 		Click(LocateElement("name","submitButton"));
 	}
+	
+	
 
 }
